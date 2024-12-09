@@ -1,5 +1,7 @@
 package ma.project.api.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -11,10 +13,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 public class Utilisateur {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +25,12 @@ public class Utilisateur {
 	private String motDePasse;
 	@Enumerated(EnumType.STRING)
 	private Role role;
+	public Utilisateur(String nom, String motDePasse, Role role) {
+		super();
+		this.nom = nom;
+		this.motDePasse = motDePasse;
+		this.role = role;
+	}
+	
+	
 }

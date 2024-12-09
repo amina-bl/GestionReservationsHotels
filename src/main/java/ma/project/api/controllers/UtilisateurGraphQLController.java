@@ -23,19 +23,19 @@ private UtilisateurRepository utilisateurRepository;
 	}
 	
 	@QueryMapping
-	public Utilisateur utilisateurById(@Argument Long id) {
+	public Utilisateur utilisateurById(@Argument("id") Long id) {
 		Utilisateur utilisateur = utilisateurRepository.findById(id).orElse(null);
 		if(utilisateur == null) throw new RuntimeException(String.format("Utilisateur %s not found", id));
 		else return utilisateur;
 	}
 	
 	@MutationMapping
-	public Utilisateur saveUtilisateur(@Argument Utilisateur utilisateur) {
+	public Utilisateur saveUtilisateur(@Argument("utilisateur") Utilisateur utilisateur) {
 		return utilisateurRepository.save(utilisateur);
 	}
 	
 	 @MutationMapping
-	 public String deleteUtilisateurById(@Argument Long id) {
+	 public String deleteUtilisateurById(@Argument("id") Long id) {
 	    	Utilisateur utilisateur = utilisateurRepository.findById(id).orElse(null);
 	    	if(utilisateur == null) {
 	        	return "utilisateur with id : " + id + " is not found";

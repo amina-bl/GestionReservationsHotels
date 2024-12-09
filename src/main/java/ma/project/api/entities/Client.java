@@ -22,4 +22,14 @@ public class Client {
 	
 	@OneToMany(mappedBy = "client")
 	private List<Reservation> reservations;
+
+	public Client(String nom, String prenom, String email, String telephone) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.telephone = telephone;
+	}
+	
+	
 }

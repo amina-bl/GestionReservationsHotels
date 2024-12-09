@@ -22,19 +22,19 @@ private ChambreRepository chambreRepository;
 	}
 	
 	@QueryMapping
-	public Chambre chambreById(@Argument Long id) {
+	public Chambre chambreById(@Argument("id") Long id) {
 		Chambre chambre = chambreRepository.findById(id).orElse(null);
 		if(chambre == null) throw new RuntimeException(String.format("Chambre %s not found", id));
 		else return chambre;
 	}
 	
 	@MutationMapping
-	public Chambre saveChambre(@Argument Chambre chambre) {
+	public Chambre saveChambre(@Argument("chambre") Chambre chambre) {
 		return chambreRepository.save(chambre);
 	}
 	
 	 @MutationMapping
-	 public String deleteChambreById(@Argument Long id) {
+	 public String deleteChambreById(@Argument("id") Long id) {
 	    	Chambre chambre = chambreRepository.findById(id).orElse(null);
 	    	if(chambre == null) {
 	        	return "chambre with id : " + id + " is not found";

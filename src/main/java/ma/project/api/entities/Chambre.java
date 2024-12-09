@@ -1,9 +1,11 @@
 package ma.project.api.entities;
 
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 
 
 @Entity
@@ -21,4 +23,13 @@ public class Chambre {
 	
 	@OneToMany(mappedBy = "chambre")
 	private List<Reservation> reservations;
+
+	public Chambre(TypeChambre type, double prix, boolean disponible) {
+		super();
+		this.type = type;
+		this.prix = prix;
+		this.disponible = disponible;
+	}
+	
+	
 }

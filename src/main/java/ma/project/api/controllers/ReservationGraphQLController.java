@@ -29,14 +29,14 @@ public class ReservationGraphQLController {
 	}
 	
 	@QueryMapping
-	public Reservation reservationById(@Argument Long id) {
+	public Reservation reservationById(@Argument("id") Long id) {
 		Reservation reservation = reservationRepository.findById(id).orElse(null);
 		if(reservation == null) throw new RuntimeException(String.format("Reservation %s not found", id));
 		else return reservation;
 	}
 	
 	@MutationMapping
-	public Reservation saveReservation(@Argument ReservationRequest reservationRequest ) {
+	public Reservation saveReservation(@Argument("reservation") ReservationRequest reservationRequest ) {
 		Client client = clientRepository.findById(reservationRequest.getClientId()).orElse(null);
 		Chambre chambre = chambreRepository.findById(reservationRequest.getChambreId()).orElse(null);
 		if(client == null) throw new RuntimeException(String.format("Client %s not found", reservationRequest.getClientId()));
@@ -52,7 +52,7 @@ public class ReservationGraphQLController {
 		}
 	}
 	@MutationMapping
-	public Reservation updateReservation(@Argument Reservation reservation) {
+	public Reservation updateReservation(@Argument("reservation") Reservation reservation) {
 	    Reservation res = reservationRepository.findById(reservation.getId()).orElseThrow(() -> new RuntimeException("Reservation not found"));
 
 	    if (reservation.getDateDebut() != null) {
