@@ -2,12 +2,22 @@ package ma.project.api.entities;
 
 import java.util.Date;
 
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import lombok.AllArgsConstructor;
 import jakarta.xml.bind.annotation.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
 @Getter
 @Setter
@@ -17,25 +27,29 @@ import lombok.AllArgsConstructor;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Reservation {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    @Temporal(TemporalType.DATE)
-    private Date dateDebut;
-    
-    @Temporal(TemporalType.DATE)
-    private Date dateFin;
-    
-    @ManyToOne
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Temporal(TemporalType.DATE)
+	private Date dateDebut;
+	
+	@Temporal(TemporalType.DATE)
+	private Date dateFin;
+	
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+	@JsonIdentityReference(alwaysAsId = true)
+	@ManyToOne
     @XmlTransient
-    private Client client;
-    
-    @ManyToOne
+	private Client client;
+	
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+	@JsonIdentityReference(alwaysAsId = true)
+	@ManyToOne
     @XmlTransient
-    private Chambre chambre;
-    
-    private String preferences;
+	private Chambre chambre;
+	
+	private String preferences;
 
     @XmlElement(name = "clientId")
     public Long getClientId() {
