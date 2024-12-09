@@ -14,6 +14,7 @@ public class Chambre {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Enumerated(EnumType.STRING)
 	private TypeChambre type;
 	private double prix;
 	private boolean disponible;
