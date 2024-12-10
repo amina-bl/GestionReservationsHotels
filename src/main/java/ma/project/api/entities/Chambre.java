@@ -21,7 +21,7 @@ public class Chambre {
 	private double prix;
 	private boolean disponible;
 	
-	@OneToMany(mappedBy = "chambre")
+	@OneToMany(mappedBy = "chambre", cascade = CascadeType.ALL)
 	private List<Reservation> reservations;
 
 	public Chambre(TypeChambre type, double prix, boolean disponible) {
