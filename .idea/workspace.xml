@@ -5,57 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b914b68e-31ae-4b26-b6db-4a5ec2cea96d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/config/CxfConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/controllers/RestChambreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/dto/ChambreRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/dto/ClientRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/ws/ChambreSoapService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/ws/ClientSoapService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/ws/ReservationSoapService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/ws/UtilisateurSoapService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ma/project/api/config/CxfConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ma/project/api/dto/ChambreRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ma/project/api/dto/ClientRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ma/project/api/ws/ChambreSoapService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ma/project/api/ws/ClientSoapService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ma/project/api/ws/ReservationSoapService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ma/project/api/ws/UtilisateurSoapService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ma.project.api.GestionReservationsHotelsApplicationTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/ma.project.api.GestionReservationsHotelsApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/controllers/RestClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/controllers/RestClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/controllers/RestReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/controllers/RestReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/dto/ReservationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/dto/ReservationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Chambre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Chambre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/entities/Utilisateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/project/api/repositories/UtilisateurRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/project/api/repositories/UtilisateurRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.example/banque-service/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.example/banque-service/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.example/banque-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.example/banque-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/GestionReservationsHotelsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/GestionReservationsHotelsApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/controllers/RestClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/controllers/RestClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/controllers/RestReservationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/controllers/RestReservationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Chambre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Chambre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/entities/TypeChambre.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/entities/TypeChambre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Utilisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/entities/Utilisateur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/repositories/ChambreRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/repositories/ChambreRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/repositories/ClientRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/repositories/ClientRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ma/project/api/repositories/ReservationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ma/project/api/repositories/ReservationRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +36,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2q3vKilTB8w89PRuBy02yDrRU6E" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -100,7 +52,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.GestionReservationsHotelsApplication.executor": "Run",
-    "git-widget-placeholder": "Merging ft-graphql",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Amina/Desktop/GestionReservationsHotels",
     "node.js.detected.package.eslint": "true",
@@ -138,6 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733904010929</updated>
       <workItem from="1733904011971" duration="2829000" />
+      <workItem from="1733911350839" duration="130000" />
     </task>
     <servers />
   </component>
