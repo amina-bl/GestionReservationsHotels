@@ -1,6 +1,7 @@
 package ma.project.api.entities;
 
 import java.util.Date;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
@@ -13,19 +14,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
-import lombok.AllArgsConstructor;
+import lombok.*;
 import jakarta.xml.bind.annotation.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
 
+
+@Entity
+@Data
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Reservation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -19,18 +19,26 @@ import lombok.AllArgsConstructor;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nom;
-    private String prenom;
-    private String email;
-    private String telephone;
-    
-    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
-    @JsonIgnore 
-    @XmlTransient
-    private List<Reservation> reservations;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String nom;
+	private String prenom;
+	private String email;
+	private String telephone;
+	
+	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+	private List<Reservation> reservations;
+
+	public Client(String nom, String prenom, String email, String telephone) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.telephone = telephone;
+	}
+	
+	
 
     @Override
     public String toString() {

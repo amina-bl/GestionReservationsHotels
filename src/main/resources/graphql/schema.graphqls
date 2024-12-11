@@ -1,0 +1,99 @@
+enum TypeChambre {
+	SIMPLE,DOUBLE
+}
+
+enum Role {
+	UTILISATEUR, ADMINISTRATEUR
+}
+
+type Client {
+	id: ID
+	nom: String
+	prenom: String
+	email: String
+	telephone: String
+	reservations: [Reservation]
+}
+
+type Chambre {
+	id: ID
+	type: TypeChambre
+	prix: Float
+	disponible: Boolean
+	reservations: [Reservation]
+}
+
+type Reservation {
+	id: ID
+	dateDebut: String
+	dateFin: String
+	preferences: String
+	client: Client
+	chambre: Chambre
+}
+
+type Utilisateur {
+	id: ID
+	nom: String
+	motDePasse: String
+	role: Role
+}
+
+type Query {
+	allClients: [Client]
+	allUtilisateurs: [Utilisateur]
+	allReservations: [Reservation]
+	allChambres: [Chambre]
+	clientById(id :ID): Client
+	utilisateurById(id :ID): Utilisateur
+	reservationById(id :ID): Reservation
+	chambreById(id :ID): Chambre
+}
+
+input ClientRequest {
+    nom: String
+	prenom: String
+	email: String
+	telephone: String
+}
+
+input ChambreRequest {
+	type: TypeChambre
+	prix: Float
+	disponible: Boolean
+}
+
+input UtilisateurRequest {
+	nom: String
+	motDePasse: String
+	role: Role
+}
+
+input ReservationRequest {
+	dateDebut: String
+	dateFin: String
+	preferences: String
+	clientId: ID
+	chambreId: ID
+}
+
+input ReservationRequest1 {
+	id: ID
+	dateDebut: String
+	dateFin: String
+	preferences: String
+}
+
+type Mutation {
+    saveClient(client :ClientRequest):Client
+    saveChambre(chambre :ChambreRequest):Chambre
+    saveUtilisateur(utilisateur :UtilisateurRequest):Utilisateur
+    saveReservation(reservation :ReservationRequest):Reservation
+    deleteClientById(id : ID): String
+    deleteReservationById(id : ID): String
+    deleteUtilisateurById(id : ID): String
+    deleteChambreById(id : ID): String
+    updateReservation(reservation :ReservationRequest1): Reservation
+}
+
+
