@@ -2,15 +2,22 @@ package ma.project.api.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.xml.bind.annotation.*;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Client {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,4 +39,15 @@ public class Client {
 	}
 	
 	
+
+    @Override
+    public String toString() {
+        return "Client{" +
+               "id=" + id +
+               ", nom='" + nom + '\'' +
+               ", prenom='" + prenom + '\'' +
+               ", email='" + email + '\'' +
+               ", telephone='" + telephone + '\'' +
+               '}';
+    }
 }

@@ -2,6 +2,7 @@ package ma.project.api.dto;
 
 import java.util.Date;
 
+<<<<<<< HEAD
 import org.springframework.boot.context.properties.bind.ConstructorBinding;
 
 import lombok.AllArgsConstructor;
@@ -26,4 +27,27 @@ public class ReservationRequest {
 	}
 
 	
+=======
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import lombok.Getter;
+import lombok.Setter;
+import ma.project.api.entities.Chambre;
+import ma.project.api.entities.Client;
+
+@Setter
+@Getter
+public class ReservationRequest {
+	
+	
+	@Temporal(TemporalType.DATE)
+	private Date dateDebut;
+	
+	@Temporal(TemporalType.DATE)
+	private Date dateFin;
+    private String preferences;
+    private Long clientId;
+    private Long chambreId;
+    
+>>>>>>> 501e55c10e546755b69244a9bee1ed954f3a8b59
 }
