@@ -26,7 +26,7 @@ public class Client {
 	private String email;
 	private String telephone;
 	
-	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "client", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	private List<Reservation> reservations;
 
 	public Long getId() {

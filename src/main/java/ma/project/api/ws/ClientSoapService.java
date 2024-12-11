@@ -14,9 +14,12 @@ import java.util.Optional;
 
 @Service
 @WebService(serviceName = "ClientSoapService")
-@AllArgsConstructor
 public class ClientSoapService {
 
+    @Autowired
+    public ClientSoapService(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
 
     private ClientRepository clientRepository;
 
