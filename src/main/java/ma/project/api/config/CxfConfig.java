@@ -1,6 +1,8 @@
 package ma.project.api.config;
 
+import lombok.NoArgsConstructor;
 import org.apache.cxf.Bus;
+import org.apache.cxf.bus.spring.SpringBus;
 import org.apache.cxf.jaxws.EndpointImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,15 +14,28 @@ import ma.project.api.ws.ReservationSoapService;
 import ma.project.api.ws.UtilisateurSoapService;
 
 @Configuration
-@AllArgsConstructor
+@NoArgsConstructor
 public class CxfConfig {
 
-    private final Bus bus;
-    private final ClientSoapService clientSoapService;
-    private final ChambreSoapService chambreSoapService;
-    private final ReservationSoapService reservationSoapService;
-    private final UtilisateurSoapService utilisateurSoapService;
 
+    private  Bus bus;
+    private  ClientSoapService clientSoapService;
+    private  ChambreSoapService chambreSoapService;
+    private  ReservationSoapService reservationSoapService;
+    private  UtilisateurSoapService utilisateurSoapService;
+
+    public CxfConfig(Bus bus, ClientSoapService clientSoapService, ChambreSoapService chambreSoapService,
+                     ReservationSoapService reservationSoapService, UtilisateurSoapService utilisateurSoapService) {
+        this.bus = bus;
+        this.clientSoapService = clientSoapService;
+        this.chambreSoapService = chambreSoapService;
+        this.reservationSoapService = reservationSoapService;
+        this.utilisateurSoapService = utilisateurSoapService;
+    }
+    @Bean
+    public Bus cxfBus() {
+        return new SpringBus();
+    }
     @Bean
     public EndpointImpl clientEndpoint() {
         EndpointImpl endpoint = new EndpointImpl(bus, clientSoapService);

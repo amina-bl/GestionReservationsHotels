@@ -1,5 +1,6 @@
 package ma.project.api.ws;
 
+import lombok.AllArgsConstructor;
 import ma.project.api.dto.*;
 import ma.project.api.entities.Client;
 import ma.project.api.repositories.ClientRepository;
@@ -13,9 +14,10 @@ import java.util.Optional;
 
 @Service
 @WebService(serviceName = "ClientSoapService")
+@AllArgsConstructor
 public class ClientSoapService {
 
-    @Autowired
+
     private ClientRepository clientRepository;
 
     public Client createClient(ClientRequest request) {

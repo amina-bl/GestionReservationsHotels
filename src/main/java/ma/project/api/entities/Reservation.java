@@ -19,9 +19,6 @@ import jakarta.xml.bind.annotation.*;
 
 
 @Entity
-@Data
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Reservation {
@@ -59,7 +56,55 @@ public class Reservation {
         return chambre != null ? chambre.getId() : null;
     }
 
-    @Override
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Date getDateDebut() {
+		return dateDebut;
+	}
+
+	public void setDateDebut(Date dateDebut) {
+		this.dateDebut = dateDebut;
+	}
+
+	public Date getDateFin() {
+		return dateFin;
+	}
+
+	public void setDateFin(Date dateFin) {
+		this.dateFin = dateFin;
+	}
+
+	public Client getClient() {
+		return client;
+	}
+
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
+	public Chambre getChambre() {
+		return chambre;
+	}
+
+	public void setChambre(Chambre chambre) {
+		this.chambre = chambre;
+	}
+
+	public String getPreferences() {
+		return preferences;
+	}
+
+	public void setPreferences(String preferences) {
+		this.preferences = preferences;
+	}
+
+	@Override
     public String toString() {
         return "Reservation{" +
                "id=" + id +
